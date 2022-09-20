@@ -14,9 +14,13 @@ public class DemoPersonAction {
 		
 		Person person2 = context.getBean("person2",Person.class);
 		System.out.println(person2.getName()+": "+person2.getAge());
+		System.out.println("date: "+person2.getMydate());
 		
 		Person person3 = context.getBean("person3",Person.class);
 		System.out.println(person3.getName()+": "+person3.getAge());
+		
+		Person person4 = context.getBean("person4",Person.class);
+		System.out.println(person4.getName()+": "+person4.getAge()+" "+person4.getMydate());
 		
 		context.close();
 	}

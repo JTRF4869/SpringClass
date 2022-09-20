@@ -1,9 +1,20 @@
 package com.jtrf.model;
 
+import java.util.Date;
+
 public class Person {
 	
 	private String name;
 	private int age;
+	private Date mydate;
+
+	public Date getMydate() {
+		return mydate;
+	}
+
+	public void setMydate(Date mydate) {
+		this.mydate = mydate;
+	}
 
 	public Person() {
 	}
