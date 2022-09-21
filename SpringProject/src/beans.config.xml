@@ -10,6 +10,12 @@
 	<context:annotation-config/>
 	<context:component-scan base-package="com.jtrf"/>
 	
+	<!-- <bean id="props" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="location">
+			<value>classpath:tree.properties</value>
+		</property>
+	</bean> -->
+	
 	
 	<bean id="logProvider" class="com.jtrf.util.LogProvider"></bean>
 	<!-- LogProvider logProvider = new LogProvider(); -->
@@ -35,7 +41,7 @@
 		<property name="loginDao" ref="loginDao"/>
 	</bean>
 	
-	<bean id="person1" class="com.jtrf.model.Person">
+	<bean id="person1" class="com.jtrf.model.Person" scope="prototype">
 		<constructor-arg index="0" value="Amy"></constructor-arg>
 		<constructor-arg index="1" value="15"></constructor-arg>
 	</bean>
@@ -86,5 +92,17 @@
 	</bean>
 	<bean id="subaruTruck" factory-bean="truckBeanFactory" factory-method="getTruckBean">
 		<constructor-arg value="6"></constructor-arg>	
+	</bean>
+	
+	<bean id="worker1" class="com.jtrf.model.Worker">
+		<property name="id" value="1001"></property>
+		<property name="name" value="Mary"></property>
+		<property name="title" value="engineer"></property>
+	</bean>
+	
+	<bean id="worker2" class="com.jtrf.model.Worker">
+		<property name="id" value="1002"></property>
+		<property name="name" value="John"></property>
+		<property name="title" value="sales"></property>
 	</bean>
 </beans>
