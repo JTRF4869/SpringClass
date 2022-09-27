@@ -105,4 +105,13 @@
 		<property name="name" value="John"></property>
 		<property name="title" value="sales"></property>
 	</bean>
+	
+	<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+	   <property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+	   <property name="url" value="jdbc:sqlserver://localhost:1433;databaseName=SpringDB"/>
+	   <property name="username" value="sa"/>
+	   <property name="password" value="P@ssw0rd"/>
+	</bean>
+	
+	
 </beans>
